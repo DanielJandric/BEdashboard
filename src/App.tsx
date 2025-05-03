@@ -2,10 +2,8 @@ import React, { useCallback, useMemo, useState } from "react";
 import ChartsSection from "./components/ChartsSection";
 import ComparisonTool from "./components/ComparisonTool";
 import FilterControls from "./components/FilterControls";
-import MapSection from "./components/MapSection";
 import MetricCard from "./components/MetricCard";
 import PropertyTable from "./components/PropertyTable";
-import SimulationSection from "./components/SimulationSection";
 import data from "./data/real_estate_data.json";
 import "./styles/globals.css";
 
@@ -167,11 +165,11 @@ const App: React.FC = () => {
   );
 
   // Calculate original total value for simulation baseline
-  const originalTotalValue = useMemo(
-    () =>
-      allProperties.reduce((sum, prop) => sum + (prop.valeurcbrechf || 0), 0),
-    [allProperties]
-  );
+  // const originalTotalValue = useMemo(
+  //   () =>
+  //     allProperties.reduce((sum, prop) => sum + (prop.valeurcbrechf || 0), 0),
+  //   [allProperties]
+  // );
 
   return (
     <div className="min-h-screen bg-be_capital_light_grey p-4 md:p-8">
@@ -214,9 +212,6 @@ const App: React.FC = () => {
       {/* Charts Section */}
       <ChartsSection properties={filteredProperties} />
 
-      {/* Map Section */}
-      <MapSection properties={filteredProperties} />
-
       {/* Detailed Property Table Section */}
       <section className="bg-white rounded-lg shadow-md p-4 mb-8">
         <div className="flex justify-between items-center mb-4">
@@ -234,10 +229,10 @@ const App: React.FC = () => {
       </section>
 
       {/* Simulation Section */}
-      <SimulationSection
+      {/* <SimulationSection
         properties={allProperties}
         originalTotalValue={originalTotalValue}
-      />
+      /> */}
 
       {/* Placeholder for other sections (Enhancements?) */}
       {/* <section className="bg-white rounded-lg shadow-md p-4">

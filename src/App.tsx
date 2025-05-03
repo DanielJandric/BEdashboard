@@ -173,10 +173,10 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-be_capital_light_grey p-4 md:p-8">
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-be_capital_dark_grey text-center">
-          BE Capital - Real Estate Portfolio Overview
-        </h1>
+      <header className="mb-8 flex justify-center">
+        <div className="bg-white px-4 py-1 rounded-md">
+          <img src="/logo.jpg" alt="logo" />
+        </div>
       </header>
 
       {/* Consolidated Metrics Section */}
